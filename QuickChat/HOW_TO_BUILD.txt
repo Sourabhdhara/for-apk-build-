@@ -1,0 +1,119 @@
+============================================================
+  QuickChat — Build Your Android APK (Step by Step)
+  Site: https://sdck.pythonanywhere.com
+============================================================
+
+
+WHAT YOU NEED INSTALLED
+-------------------------
+1. Android Studio  →  https://developer.android.com/studio
+   (download and install — it includes Java JDK 17 + Android SDK)
+
+That's it. No Node.js. No extra tools.
+
+
+STEP 1 — Open the project in Android Studio
+---------------------------------------------
+  File → Open → select this "QuickChat" folder → click OK
+
+  Android Studio will show "Gradle sync" at the bottom.
+  Wait for it to finish (may take 2–5 min first time).
+  If it asks to update Gradle or SDK → click OK / Update.
+
+
+STEP 2 — Build the APK
+------------------------
+  Build → Build Bundle(s) / APK(s) → Build APK(s)
+
+  Wait for the build bar at the bottom to complete.
+  A popup will appear: "Build successful"
+  Click "locate" in that popup.
+
+  Your APK is at:
+    app/build/outputs/apk/debug/app-debug.apk
+
+
+STEP 3 — Install on your phone
+--------------------------------
+  Option A — USB:
+    Connect phone → copy the APK file → tap it on phone to install
+
+  Option B — WhatsApp / Telegram / Drive:
+    Send the APK to yourself → download → tap to install
+
+  On your phone:
+    Settings → Apps → Special App Access → Install unknown apps
+    → Allow for your file manager or browser
+
+
+============================================================
+  PERMISSIONS THE APP WILL ASK FOR
+============================================================
+
+When you first open the app it will ask for:
+
+  ✅ Camera          — for taking photos/videos in chat
+  ✅ Microphone      — for voice calls and voice messages
+  ✅ Storage         — for uploading/downloading files
+  ✅ Location        — for sharing your location in chat
+  ✅ Notifications   — for message alerts (Android 13+)
+
+Grant all of them for the full experience.
+
+
+============================================================
+  FEATURES THAT WORK
+============================================================
+
+  ✅ Login / Register
+  ✅ Send & receive messages (real-time polling)
+  ✅ Voice messages (microphone)
+  ✅ File & image attachments (gallery + camera)
+  ✅ Voice & video calls (mic + camera via getUserMedia)
+  ✅ Share location (GPS)
+  ✅ Notifications (push via browser notification API)
+  ✅ Profile picture upload
+  ✅ Group chats
+  ✅ Stories
+  ✅ Contact info panel
+  ✅ Profile photo viewer
+  ✅ Pull-down to refresh
+  ✅ Back button navigates inside the app
+  ✅ Offline error page shown if no internet
+
+
+============================================================
+  TROUBLESHOOTING
+============================================================
+
+Gradle sync fails
+  → File → Invalidate Caches → Restart
+
+White / blank screen
+  → Check internet connection on device
+  → Make sure https://sdck.pythonanywhere.com is reachable
+
+Camera / mic not working
+  → Go to phone Settings → Apps → QuickChat → Permissions
+  → Manually enable Camera, Microphone, Storage, Location
+
+Build error: "SDK not found"
+  → Android Studio → SDK Manager → install Android 14 (API 34)
+
+"Install blocked" on phone
+  → Enable "Install unknown apps" for your file manager
+
+
+============================================================
+  TO UPDATE THE APP AFTER SERVER CHANGES
+============================================================
+
+Since the app loads your live website, ANY changes you push
+to PythonAnywhere are INSTANTLY reflected — no rebuild needed.
+
+Only rebuild the APK if you change:
+  - App name or package ID
+  - Permissions
+  - App icon
+
+============================================================
